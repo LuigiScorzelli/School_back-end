@@ -17,9 +17,9 @@ class CreateTeachersTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('last_name');
-            $table->unsignedInteger('ranking_mark');
-            $table->string('email');
-            $table->string('phone');
+            $table->unsignedInteger('ranking_mark')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }

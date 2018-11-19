@@ -17,9 +17,6 @@ class CourseTeacherSeeder extends Seeder
             DB::table('course_teacher')->insert([
                 'course_id' => $faker->numberBetween($min = 1, $max = 15),
                 'teacher_id' => $faker->numberBetween($min = 1, $max = 15),
-                // 'course_id' => count(1, 15),
-                // 'teacher_id' => count(1, 15),
-
             ]);
         }
     }

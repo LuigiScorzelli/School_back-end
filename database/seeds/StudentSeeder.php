@@ -17,8 +17,8 @@ class StudentSeeder extends Seeder
             DB::table('students')->insert([
                'name' => $faker->name,
                'last_name' => $faker->lastName,
-               'age' => count(18, 40),
-               'points' => count(0, 50),
+               'age' => $faker->numberBetween($min=18, $max=40),
+               'points' => $faker->numberBetween($min=18, $max=40),
                'email' => $faker->freeEmail,
                'phone' => $faker->e164PhoneNumber,
                'course_id' => $faker->numberBetween($min=1, $max=5),
